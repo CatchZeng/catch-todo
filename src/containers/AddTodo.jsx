@@ -1,21 +1,24 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import { addTodo } from "../actions";
 
-export default class AddTodo extends Component {
+class AddTodo extends Component {
   constructor(props) {
     super(props);
     this.state = { value: "" };
-
     this.onSubmit = this.onSubmit.bind(this);
     this.onChange = this.onChange.bind(this);
   }
 
   onSubmit(e) {
     e.preventDefault();
-    if (!input.value.trim()) {
+    if (!this.state.value.trim()) {
       return;
     }
-    dispatch(addTodo(input.value));
-    input.value = "";
+    this.props.dispatch(addTodo(this.state.value));
+    this.setState({
+      value: ""
+    });
   }
 
   onChange(e) {
@@ -28,10 +31,16 @@ export default class AddTodo extends Component {
     return (
       <div>
         <form onSubmit={this.onSubmit}>
-          <input type="text" onChange={this.onChange} />
+          <input
+            type="text"
+            value={this.state.value}
+            onChange={this.onChange}
+          />
           <button type="submit">Add</button>
         </form>
       </div>
     );
   }
 }
+
+export default connect()(AddTodo);

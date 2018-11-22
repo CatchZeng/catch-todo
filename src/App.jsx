@@ -1,5 +1,6 @@
 import React from "react";
-import AddTodo from "./components/AddTodo";
+import AddTodo from "./containers/AddTodo.jsx";
+import TodoList from "./components/TodoList.jsx";
 
 export default class App extends React.Component {
   constructor() {
@@ -13,6 +14,7 @@ export default class App extends React.Component {
     return (
       <div>
         <AddTodo />
+        <TodoList />
       </div>
     );
   }
