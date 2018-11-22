@@ -1,0 +1,2 @@
+# LocalizationStudio
+Localization Studio
