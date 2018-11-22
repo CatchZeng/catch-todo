@@ -1,14 +1,17 @@
 {
-    "presets": [
-        [
-            "es2015",
-            {
-                "loose": true
-            }
-        ],
-        "react"
+  "presets": [
+    [
+      "es2015",
+      {
+        "loose": true
+      }
     ],
-    "plugins": [
-        ["import", { "libraryName": "antd", "libraryDirectory": "es", "style": "css" }]
+    "react"
+  ],
+  "plugins": [
+    [
+      "import",
+      { "libraryName": "antd", "libraryDirectory": "es", "style": "css" }
     ]
+  ]
 }

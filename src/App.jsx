@@ -1,4 +1,5 @@
 import React from "react";
+import AddTodo from "./components/AddTodo";
 
 export default class App extends React.Component {
   constructor() {
@@ -11,7 +12,7 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        <h1>Todos</h1>
+        <AddTodo />
       </div>
     );
   }

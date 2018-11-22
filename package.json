@@ -1,7 +1,7 @@
 {
   "name": "catch-todo",
   "version": "1.0.0",
-  "description": "",
+  "description": "todo app",
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -18,6 +18,8 @@
   "dependencies": {
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
+    "react-redux": "^5.1.1",
+    "redux": "^4.0.1",
     "webpack": "^4.16.5"
   },
   "devDependencies": {
