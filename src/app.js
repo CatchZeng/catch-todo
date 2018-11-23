@@ -7,6 +7,10 @@ import reducers from "./reducers";
 
 const store = createStore(reducers);
 
+store.subscribe(() => {
+  console.log(store.getState());
+});
+
 ReactDom.render(
   <Provider store={store}>
     <App name="Catch Todo" />
